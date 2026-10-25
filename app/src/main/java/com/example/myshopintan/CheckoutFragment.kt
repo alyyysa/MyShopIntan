@@ -38,6 +38,14 @@ class CheckoutFragment : Fragment() {
                             edtAddress.setText(res)
                         }
                 }
+
+            btnDone.setOnClickListener {
+                findNavController().navigateUp()
+                }
+            }
         }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
